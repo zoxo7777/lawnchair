@@ -403,3 +403,19 @@ protobuf {
 }
 
 apply plugin: 'kotlin-android-extensions'
+
+allprojects {
+    tasks.whenTaskAdded { task ->
+        if (task.name.startsWith('strip') && task.name.endsWith('DebugSymbols')) {
+            task.enabled = false
+        }
+    }
+}
+
+subprojects {
+    afterEvaluate { p ->
+        if (p.plugins.hasPlugin('com.android.application')) {
+            p.android.packagingOptions { doNotStrip "**/*.so" }
+        }
+    }
+}
