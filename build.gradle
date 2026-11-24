@@ -355,7 +355,6 @@ dependencies {
     implementation 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:2.0.1'
     implementation 'com.github.LawnchairLauncher:chroma:1.2.6'
     implementation 'com.github.LawnchairLauncher:hoko-lite:5f8466b'
-    implementation 'com.github.fennifith:Attribouter:0.1.5'
     implementation 'com.github.bumptech.glide:glide:4.8.0'
 
     implementation 'com.github.topjohnwu.libsu:core:2.5.1'
