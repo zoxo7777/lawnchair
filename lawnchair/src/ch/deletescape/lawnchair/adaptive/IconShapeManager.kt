@@ -38,7 +38,7 @@ class IconShapeManager(private val context: Context) {
 
     private val systemIconShape = getSystemShape()
     var iconShape by context.lawnchairPrefs.StringBasedPref(
-            "pref_iconShape", systemIconShape, AdaptiveIconCompat::onShapeChanged,
+            "pref_iconShape", (IconShape.fromString("cupertino") ?: systemIconShape), AdaptiveIconCompat::onShapeChanged,
             {
                 IconShape.fromString(it) ?: systemIconShape
             }, IconShape::toString) { /* no dispose */ }
