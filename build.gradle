@@ -346,7 +346,6 @@ dependencies {
     // Required for AOSP to compile. This is already included in the sysui_shared.jar
     implementation fileTree(dir: "${FRAMEWORK_PREBUILTS_DIR}/libs", include: 'plugin_core.jar')
 
-    implementation 'com.github.florent37:fiftyshadesof:1.0.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:2.0.1'
     implementation 'com.github.LawnchairLauncher:chroma:1.2.6'
